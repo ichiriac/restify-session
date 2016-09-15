@@ -60,6 +60,12 @@ You can see your session id (sid) into the response header:
 
 See full documentation into _doc_ folder.
 
+## Modifying session data
+Whenever modified the req.session data, remember execute `req.saveSession()` immediately, otherwise the newly modified data will be lost at the next time when new request comes in
+
+## Destroy session
+Execute `req.destroySession()` to clear the session data in the Redis
+
 ## Run Tests
 
 All tests are written in mocha and designed to be run with npm:
